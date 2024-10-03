@@ -9,7 +9,7 @@ from groq import Groq
 # Configure Streamlit on head
 st.set_page_config(
     page_title="INSPO - AI Productivity Assistant",
-    page_icon="https://img.icons8.com/?size=100&id=3fxG1r3aX8Qo&format=png&color=000000",
+    page_icon="https://i.gifer.com/LMkz.gif",
     layout="centered"
 )
 # Page title
