@@ -10,7 +10,7 @@ from groq import Groq
 st.set_page_config(
     page_title="AI Productivity Assistant",
     page_icon="https://img.icons8.com/?size=100&id=3fxG1r3aX8Qo&format=png&color=000000",
-    layout="centered"
+    layout="wide"
 )
 # Page title
 st.image("https://i.gifer.com/LMkz.gif", use_column_width="always")
