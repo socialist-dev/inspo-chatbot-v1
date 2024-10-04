@@ -21,6 +21,10 @@ st.set_page_config(
     layout="centered"
 )
 
+# Style with CSS
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 try:
     secrets = dotenv_values(".env")  # for dev env
     GROQ_API_KEY = secrets["GROQ_API_KEY"]
