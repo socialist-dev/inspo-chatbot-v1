@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSPO AI Chatbot Widget</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .container  {
+            position: relative;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+        button {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            padding: 10px 5px;
+            color: #C6C6C6;
+            z-index: 3;
+            background: rgba( 0, 0, 0, 0.15 );
+            backdrop-filter: blur( 10px );
+            -webkit-backdrop-filter: blur( 10px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            /* border: 1px solid #ffffff2e; */
+            cursor: pointer;
+            font-family: monospace;
+        }
+        button:hover {
+            color: #fff;
+            font-weight: 900;
+        }
+        .overlay {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            border-width: 5px 5px 50px 5px;
+            border-style: solid;
+            border-color: #000;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+        iframe {
+            position: absolute;
+            background-color: #000;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="modeButton">Wide mode</button>
+
+        <script>
+            // Biến để theo dõi trạng thái hiện tại
+            var isWideMode = true;
+
+            // Lắng nghe sự kiện click của button
+            document.getElementById("modeButton").addEventListener("click", function() {
+                var iframe = document.getElementById("myIframe");
+                var button = document.getElementById("modeButton");
+
+                if (isWideMode) {
+                    // Chuyển sang centered mode
+                    iframe.src = "https://inspo-chatbot-v1-mobile.streamlit.app/?embed=true"; // URL centered mode
+                    button.innerText = "Centered mode";
+                } else {
+                    // Chuyển lại về wide mode
+                    iframe.src = "https://inspo-chatbot-v1.streamlit.app/?embed=true"; // URL wide mode
+                    button.innerText = "Wide mode";
+                }
+
+                // Đổi trạng thái
+                isWideMode = !isWideMode;
+            });
+        </script>
+
+        <div class="overlay"></div>
+        <iframe
+            id="myIframe"
+            src="https://inspo-chatbot-v1.streamlit.app/?embed=true"
+            frameborder="0"
+        ></iframe>
+        <!-- <div class="chatbot"></div> -->
+    </div>
+</body>
+</html>
