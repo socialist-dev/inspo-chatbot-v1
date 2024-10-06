@@ -17,7 +17,7 @@ def parse_groq_stream(stream):
 # streamlit page configuration
 st.set_page_config(
     page_title="INSPO - AI Productivity Assistant",
-    page_icon="https://i.postimg.cc/bvCCFv3C/logo-inspo-01.png",
+    page_icon="https://i.gifer.com/3OqCv.gif",
     layout="centered"
 )
 
