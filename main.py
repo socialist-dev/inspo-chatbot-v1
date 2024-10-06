@@ -17,7 +17,7 @@ def parse_groq_stream(stream):
 # streamlit page configuration
 st.set_page_config(
     page_title="INSPO - AI Productivity Assistant",
-    page_icon="https://i.gifer.com/LMkz.gif",
+    page_icon="https://i.postimg.cc/bvCCFv3C/logo-inspo-01.png",
     layout="centered"
 )
 
@@ -71,7 +71,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 st.image("https://i.gifer.com/3OqCo.gif", use_column_width="always", caption="INSPO™")
 st.title("Hello!")
 st.write("Today is a good day to work!")
-st.caption("Inspo AI Chatbot | Model: meta-llama/Llama-3.1-70B")
+st.caption("INSPO AI Chatbot | Model: meta-llama/Llama-3.1-70B")
 # the messages in chat_history will be stored as {"role":"user/assistant", "content":"msg}
 # display chat history
 for message in st.session_state.chat_history:
