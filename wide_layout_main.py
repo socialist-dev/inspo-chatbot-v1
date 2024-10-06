@@ -18,7 +18,7 @@ def parse_groq_stream(stream):
 st.set_page_config(
     page_title="INSPO - AI Productivity Assistant",
     page_icon="https://i.gifer.com/LMkz.gif",
-    layout="centered"
+    layout="wide"
 )
 
 try:
@@ -68,7 +68,9 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 # Page title
-st.image("https://i.gifer.com/3OqCo.gif", use_column_width="always", caption="INSPO™")
+left_co, cent_co,last_co = st.columns(3)
+with cent_co:
+    st.image("https://i.gifer.com/3OqCo.gif", use_column_width="always", caption="INSPO™")
 st.title("Hello!")
 st.write("Today is a good day to work!")
 st.caption("Inspo AI Chatbot | Model: meta-llama/Llama-3.1-70B")
