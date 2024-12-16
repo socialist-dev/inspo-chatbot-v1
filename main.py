@@ -37,7 +37,7 @@ INITIAL_MSG = secrets["INITIAL_MSG"]
 CHAT_CONTEXT = secrets["CHAT_CONTEXT"]
 
 
-provider = Groq(api_key=GROQ_API_KEY)
+client = Groq(api_key=GROQ_API_KEY)
 # changed client > provider to avoid dangerous keyword from streamlit
 
 # initialize the chat history if present as streamlit session
@@ -103,7 +103,7 @@ if user_prompt:
 
     # Display assistant response in chat message container
     with st.chat_message("assistant", avatar='https://pub-821312cfd07a4061bf7b99c1f23ed29b.r2.dev/v1/dynamic/color/flash-dynamic-color.png'):
-        stream = provider.chat.completions.create(
+        stream = client.chat.completions.create(
             model="llama-3.1-70b-versatile",
             messages=messages,
             stream=True  # for streaming the message
