@@ -73,7 +73,8 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 #     st.image('static/logo-inspo-02.png', use_column_width="always", caption="INSPO™")
 st.title("Hello!")
 st.write("Today is a good day to work!")
-st.caption("INSPO AI Chatbot | Model: meta-llama/Llama-3.1-70B")
+# st.caption("INSPO AI Chatbot | Model: meta-llama/Llama-3.1-70B")
+st.caption("INSPO AI Chatbot | 2024 inspo-chatbot-v1")
 # the messages in chat_history will be stored as {"role":"user/assistant", "content":"msg}
 # display chat history
 for message in st.session_state.chat_history:
