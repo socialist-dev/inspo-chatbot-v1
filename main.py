@@ -37,7 +37,7 @@ INITIAL_MSG = secrets["INITIAL_MSG"]
 CHAT_CONTEXT = secrets["CHAT_CONTEXT"]
 
 
-provider = Groq(GROQ_API_KEY)
+provider = Groq(api_key=GROQ_API_KEY)
 # changed client > provider to avoid dangerous keyword from streamlit
 
 # initialize the chat history if present as streamlit session
