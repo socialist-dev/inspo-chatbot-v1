@@ -68,9 +68,9 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 # Page title
-left_co, cent_co,last_co = st.columns(3)
-with cent_co:
-    st.image('static/logo-inspo-02.png', use_column_width="always", caption="INSPO™")
+# left_co, cent_co,last_co = st.columns(3)
+# with cent_co:
+#     st.image('static/logo-inspo-02.png', use_column_width="always", caption="INSPO™")
 st.title("Hello!")
 st.write("Today is a good day to work!")
 # st.caption("INSPO AI Chatbot | Model: meta-llama/Llama-3.1-70B")
