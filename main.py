@@ -5,6 +5,7 @@ from dotenv import dotenv_values
 import streamlit as st
 import streamlit.components.v1 as components
 from groq import Groq
+from PIL import Image
 
 # Function resolves response thread from Groq
 def parse_groq_stream(stream):
@@ -68,10 +69,11 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 # Page title
-st.image("https://i.gifer.com/3OqCo.gif", use_column_width="always", caption="INSPO™")
+image = Image.open('static/logo-inspo-02.png')
+st.image(image, use_column_width="always", caption="INSPO™")
 st.title("Hello!")
 st.write("Today is a good day to work!")
-st.caption("INSPO AI Chatbot | Model: meta-llama/Llama-3.1-70B")
+# st.caption("INSPO AI Chatbot | Model: meta-llama/Llama-3.1-70B")
 # the messages in chat_history will be stored as {"role":"user/assistant", "content":"msg}
 # display chat history
 for message in st.session_state.chat_history:
