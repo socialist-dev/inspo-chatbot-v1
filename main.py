@@ -37,7 +37,7 @@ INITIAL_MSG = secrets["INITIAL_MSG"]
 CHAT_CONTEXT = secrets["CHAT_CONTEXT"]
 
 
-# client = Groq(api_key=GROQ_API_KEY)
+client = Groq(GROQ_API_KEY)
 
 # initialize the chat history if present as streamlit session
 if "chat_history" not in st.session_state:
