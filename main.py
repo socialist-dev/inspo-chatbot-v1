@@ -105,7 +105,7 @@ if user_prompt:
     # Display assistant response in chat message container
     with st.chat_message("assistant", avatar='https://pub-821312cfd07a4061bf7b99c1f23ed29b.r2.dev/v1/dynamic/color/flash-dynamic-color.png'):
         stream = client.chat.completions.create(
-            model="llama-3.1-70b-versatile",
+            model="llama-3.3-70b-versatile",
             messages=messages,
             stream=True  # for streaming the message
         )
